@@ -5,6 +5,24 @@ public class Registration {
         private Register register;
 
         public static void main(String[] args) {
+                Account AccountObject = new Account();// Created Account object to use multiple classes.
+                AccountObject.displayMenu();
+
+                try(Scanner scanner = new Scanner(System.in)){
+                        System.out.print("Enter ID number --> ");
+                        String customerID = scanner.nextLine();
+
+                        System.out.println("Enter password --> ");
+                        String password = scanner.nextLine();
+
+                        if("HAL123".equals(customerID) && "qwerty".equals(password)){
+                                System.out.println(" Login successful ");
+                        }
+                        else{
+                                System.out.println("Invalid ID or password");
+                        }
+                }
+
                 Register register = new Register();
                 try(Scanner scanner = new Scanner(System.in)){ // Used scanner to read user input for their unique password, id and names.
                         System.out.println("Enter name -->  ");
@@ -15,7 +33,7 @@ public class Registration {
                         String customerID = scanner.nextLine();
                         register.setcustomerID(customerID);
 
-                        System.out.println("Enter password --> ");
+                        System.out.println("Enter password --> "); //Prints instructions for the user to enter their personal information, ID number and password.
                         String password = scanner.nextLine();
                         register.password(password);
                         

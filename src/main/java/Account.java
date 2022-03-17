@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-
-
 public class Account {
     private double balance;
     private double previousTransaction;
@@ -11,6 +9,10 @@ public class Account {
     Account(String cName, String cID){
         customerName = cName;
         customerID = cID;
+    }
+
+    public Account() { // Had to create a constructor for the Account object in Registration.java to work.
+
     }
 
     void deposit(double amount){ // Here I am creating the deposit method.
@@ -103,9 +105,5 @@ public class Account {
     }
 
 
-    public static void main(String[] args) {
-        Account obj1 = new Account("Halim","HA123"); //created an example account and customerID.
-        obj1.displayMenu();
 
-    }
 }
