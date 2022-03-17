@@ -44,7 +44,7 @@ public class Account {
         Scanner scanner = new Scanner(System.in);// Created scanner to read user inputs.
 
         System.out.println("Hello "+ customerName);
-        System.out.println("Your identification number is "+ customerID);
+        System.out.println("Your identification number is "+ customerID); //This will make the console print out instructions for the user to follow.
         System.out.println("\n");
         System.out.println("A. Get Balance");
         System.out.println("B. Deposit");

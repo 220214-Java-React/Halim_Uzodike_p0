@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Registration {
 
+        private Register register;
+
         public static void main(String[] args) {
                 Register register = new Register();
                 try(Scanner scanner = new Scanner(System.in)){ // Used scanner to read user input for their unique password, id and names.
@@ -16,11 +18,19 @@ public class Registration {
                         System.out.println("Enter password --> ");
                         String password = scanner.nextLine();
                         register.password(password);
+                        
+                        printRegisterData(register);
                 }
         }
 
-
+        private static void printRegisterData(Register register) {
+                System.out.println(register.getCustomerID());
+                System.out.println(register.getCustomerName());
+                System.out.println(register.getPassword());
         }
+
+
+}
 class Register{
         private String customerName;
         private String customerID;
