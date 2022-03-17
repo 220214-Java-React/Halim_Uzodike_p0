@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+
+
 public class Account {
     private double balance;
     private double previousTransaction;
@@ -28,7 +30,7 @@ public class Account {
             System.out.println("Deposited: $" + previousTransaction);
         }
         else if (previousTransaction < 0){
-            System.out.println("Withdrew: $" + Math.abs(previousTransaction));
+            System.out.println("Withdrew: $" + Math.abs(previousTransaction));// Used absolute value because you can't withdraw a negative number.
         }
         else{
             System.out.println("No transaction took place.");
@@ -39,7 +41,7 @@ public class Account {
     }
     void displayMenu(){
         char option='\0';
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);// Created scanner to read user inputs.
 
         System.out.println("Hello "+ customerName);
         System.out.println("Your identification number is "+ customerID);
@@ -57,7 +59,7 @@ public class Account {
             option = scanner.next().charAt(0);
             System.out.println("\n");
 
-            switch (option){
+            switch (option){          // Switch case in do while loop so that each option could be run depending on what option the user selects.
                 case 'E':
                     System.out.println("........................................");
                     break;
@@ -101,5 +103,9 @@ public class Account {
     }
 
 
+    public static void main(String[] args) {
+        Account obj1 = new Account("Halim","HA123"); //created an example account and customerID.
+        obj1.displayMenu();
 
+    }
 }
